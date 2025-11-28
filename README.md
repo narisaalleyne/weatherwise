@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WeatherWise – Real-Time Weather Dashboard
 
-## Getting Started
+WeatherWise is a simple and responsive weather application built using Next.js.  
+It allows users to search for a city and view real-time weather information such as  
+temperature, humidity, wind speed, and weather conditions.
 
-First, run the development server:
+This project is part of CPAN144 – Group Project (Phase 1).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌤️ Project Features (Phase 1)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### ✅ Project Setup & Structure
+- Created a Next.js project using the App Router.
+- Added pages: **Home**, **Favourites**, **City Page (dynamic)**.
+- Added components: **NavBar**, **Footer**, **WeatherCard**.
+- Set up clean folder structure.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### ✅ Components & State
+- Implemented React state for search input.
+- Passed props between components.
+- Lifted state to the main page.
 
-## Learn More
+### ✅ Routing
+- Home page (`/`)
+- Favourites page (`/favourites`)
+- City dynamic page (`/city/[id]`)
+- Navigation using the NavBar component.
 
-To learn more about Next.js, take a look at the following resources:
+### ✅ Basic Styling
+- Simple responsive layout using CSS/Tailwind (basic).
+- Clean and readable UI.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📁 Folder Structure
 
-## Deploy on Vercel
+weatherwise/
+| |app/
+│ -layout.tsx
+|_ page.tsx
+│ - favourites/
+│ - page.tsx
+│ - city/
+│ - page.tsx
+├─ components/
+│ - NavBar.jsx
+│ - Footer.jsx
+│ - WeatherCard.jsx
+| -SearchBar
+├─ public/
+├─ README.md
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## 👥 Team Members
+- **Bibi Narisa Alleyne** – Frontend + Component Logic  
+- **Dawattie Kissoon** – Styling + API Handling
+- **Great** - Assist with both
+
+
+##  How to Run This Project
+
+1. Clone the repo  
+
+2. Install dependencies  
+
+3. Run the development server  
+
+
+## 📚 Next Steps (Phase 2)
+- Integrate OpenWeatherMap API.
+- Add auto-suggestions search.
+- Add LocalStorage for favourite cities.
+- Implement Dark/Light mode.
+
+
+## ✔ Project Status
+**Completed Phase 1**  
+Ready for Phase 2.
+
