@@ -1,79 +1,103 @@
-# WeatherWise – Real-Time Weather Dashboard
+WeatherWise – Weather Dashboard (Phase 1)
 
-WeatherWise is a simple and responsive weather application built using Next.js.  
-It allows users to search for a city and view real-time weather information such as  
-temperature, humidity, wind speed, and weather conditions.
+WeatherWise is a simple weather dashboard built with Next.js (App Router).
+This project is part of CPAN144 – Group Project (Phase 1) and focuses on project setup, routing, components, and UI structure before API integration.
 
-This project is part of CPAN144 – Group Project (Phase 1).
+Phase 1 Features
+✔ Project Setup & Routing
 
+Next.js project initialized using the App Router.
 
-## 🌤️ Project Features (Phase 1)
+Pages created:
 
-### ✅ Project Setup & Structure
-- Created a Next.js project using the App Router.
-- Added pages: **Home**, **Favourites**, **City Page (dynamic)**.
-- Added components: **NavBar**, **Footer**, **WeatherCard**.
-- Set up clean folder structure.
+Home Page (/)
 
-### ✅ Components & State
-- Implemented React state for search input.
-- Passed props between components.
-- Lifted state to the main page.
+Favourites Page (/favourites)
 
-### ✅ Routing
-- Home page (`/`)
-- Favourites page (`/favourites`)
-- City dynamic page (`/city/[id]`)
-- Navigation using the NavBar component.
+City Dynamic Route (/city/[cityName])
 
-### ✅ Basic Styling
-- Simple responsive layout using CSS/Tailwind (basic).
-- Clean and readable UI.
+Clean and organized folder structure.
 
+✔ Components
 
-## 📁 Folder Structure
+NavBar for navigation.
 
+Footer for layout.
+
+WeatherCard for displaying city information.
+
+SearchBar for user input.
+
+✔ State & Props
+
+Implemented React state for search handling.
+
+Lifted state to parent component.
+
+Passed props cleanly to child components.
+
+✔ Basic UI
+
+Simple responsive styling.
+
+Clean layout (CSS or Tailwind).
+
+Folder Structure
 weatherwise/
-| |app/
-│ -layout.tsx
-|_ page.tsx
-│ - favourites/
-│ - page.tsx
-│ - city/
-│ - page.tsx
-├─ components/
-│ - NavBar.jsx
-│ - Footer.jsx
-│ - WeatherCard.jsx
-| -SearchBar
-├─ public/
-├─ README.md
+│ app/
+│   |-layout.tsx
+│   |- page.tsx
+│   |- favourites/
+│   │   └ page.tsx
+│   |- city/
+│   │   └ page.tsx
+|   |- global.css
+│ components/
+│   |- NavBar.jsx
+│   |- Footer.jsx
+│   |- WeatherCard.jsx
+│   |- SearchBar.jsx
+|   |-Loading
+│ public/
+| README.md
+
+Team Members
+
+Bibi Narisa Alleyne – Frontend UI + Component Logic
+
+Dawattie Kissoon – Styling + Setup
+
+Great – Documentation + Support
+
+How to Run Locally
+
+Clone the repository:
+
+git clone https://github.com/narisaalleyne/weatherwise.git
 
 
+Install dependencies:
 
-## 👥 Team Members
-- **Bibi Narisa Alleyne** – Frontend + Component Logic  
-- **Dawattie Kissoon** – Styling + API Handling
-- **Great** - Assist with both
+npm install
 
 
-##  How to Run This Project
+Start the development server:
 
-1. Clone the repo  
+npm run dev
 
-2. Install dependencies  
+Next Steps (Phase 2)
 
-3. Run the development server  
+Integrate OpenWeatherMap API
 
+Display live weather data
 
-## 📚 Next Steps (Phase 2)
-- Integrate OpenWeatherMap API.
-- Add auto-suggestions search.
-- Add LocalStorage for favourite cities.
-- Implement Dark/Light mode.
+Add LocalStorage for favourite cities
 
+Add error handling + loading states
 
-## ✔ Project Status
-**Completed Phase 1**  
-Ready for Phase 2.
+Improve UI layout
 
+Project Status
+
+Phase 1 completed
+Project is fully prepared for Phase 2 API integration.
