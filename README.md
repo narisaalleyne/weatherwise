@@ -1,12 +1,31 @@
-WeatherWise – Weather Dashboard (Phase 2)
+🌦️WeatherWise – Weather Dashboard (Phase 3)
 
-WeatherWise is a weather dashboard built with Next.js (App Router) that allows users to search for cities, view live weather data, and manage favourite cities. This project is part of CPAN144 – Group Project.
+WeatherWise is a responsive weather dashboard built with Next.js (App Router) that allows users to search for cities, view real-time weather data, and manage a list of favourite cities. This project was developed as part of CPAN144 – Group Project and completed through multiple phases, with Phase 3 focusing on performance optimization and final presentation readiness.
+
+
+---
+
+Project Objectives
+
+Provide real-time weather information for cities worldwide
+
+Allow users to save and manage favourite cities
+
+Apply modern React and Next.js best practices
+
+Optimize application performance and user experience
+
+Prepare the application for demonstration and presentation
+
+
+
+---
 
 Phase 1 Features
 
 ✔ Project Setup & Routing
 
-Next.js project initialized using the App Router.
+Next.js project initialized using the App Router
 
 Pages created:
 
@@ -14,69 +33,138 @@ Home Page (/)
 
 Favourites Page (/favourites)
 
-City Dynamic Route (/city/[cityName])
+City Page (/city)
 
-Clean and organized folder structure.
+
+Clean and organized folder structure
+
 
 ✔ Components
 
-NavBar for navigation.
+NavBar for navigation
 
-Footer for layout.
+Footer for layout consistency
 
-WeatherCard for displaying city information.
+WeatherCard for displaying weather details
 
-SearchBar for user input.
+SearchBar for city search input
+
 
 ✔ State & Props
 
-Implemented React state for search handling.
+React state used for search handling
 
-Lifted state to parent component.
+State lifted to parent components
 
-Passed props cleanly to child components.
+Props passed cleanly between components
+
 
 ✔ Basic UI
 
-Simple responsive styling.
+Responsive layout using Tailwind CSS
 
-Clean layout using CSS/Tailwind.
+Clean and simple user interface
+
+
+
+---
 
 Phase 2 Features / Updates
 
 ✔ API Integration
 
-Integrated OpenWeatherMap API to fetch live weather data.
+Integrated OpenWeatherMap API
 
-Dynamic city weather details displayed on both Home and City pages.
+Displays live weather data for searched cities
+
+Dynamic city weather details shown on both Home and City pages
+
 
 ✔ Favourites Management
 
-Users can add/remove favourite cities.
+Users can add and remove favourite cities
 
-Favourite cities stored in LocalStorage, ensuring persistence across sessions.
+Favourite cities stored in LocalStorage
+
+Data persists even after browser refresh or restart
+
 
 ✔ Loading & Error Handling
 
-Loading state displayed while fetching data.
+Loading indicators displayed during API requests
 
-Error messages displayed for invalid searches or failed API requests.
+Error messages shown for invalid searches or failed API calls
+
 
 ✔ Enhanced UI / UX
 
-Improved responsive layout for mobile and desktop.
+Improved responsiveness for mobile and desktop
 
-WeatherCard now displays additional data (e.g., temperature, weather conditions, humidity, wind speed).
+WeatherCard displays:
 
-SearchBar enhanced for better user experience.
+Temperature
+
+Weather condition
+
+Weather icon
+
+
+SearchBar enhanced for better usability
+
 
 ✔ State Management Enhancements
 
-Centralized state for handling search and favourites.
+Centralized handling of search and favourites state
 
-Props and state shared efficiently between components.
+Efficient sharing of data across components
 
-Folder Structure
+
+
+---
+
+Phase 3 Features / Performance Optimization
+
+✔ Lazy Loading & Code Splitting
+
+Implemented dynamic imports using next/dynamic
+
+WeatherCard component is lazy-loaded to reduce initial bundle size
+
+Improves page load performance and responsiveness
+
+
+✔ Image Optimization
+
+Replaced standard <img> tags with Next.js <Image />
+
+External weather icons securely configured using remotePatterns
+
+Optimized image loading and performance
+
+
+✔ Improved User Experience
+
+Faster initial page load
+
+Reduced unnecessary rendering
+
+Smooth transitions when loading weather data
+
+
+✔ Presentation Readiness
+
+Application fully functional and stable
+
+Optimized features demonstrated during presentation
+
+Clear explanation of technologies and challenges prepared
+
+
+
+---
+
+📁 Folder Structure
+
 weatherwise/
 │ app/
 │   ├ layout.tsx
@@ -86,52 +174,57 @@ weatherwise/
 │   ├ city/
 │   │   └ page.tsx
 │   └ global.css
+│
 │ components/
-│   ├ NavBar.jsx
-│   ├ Footer.jsx
-│   ├ WeatherCard.jsx
-│   └ SearchBar.jsx
+│   ├ NavBar.tsx
+│   ├ Footer.tsx
+│   ├ WeatherCard.tsx
+│   └ SearchBar.tsx
+│
 │ public/
+│
+│ next.config.js
 │ README.md
 
-Team Members
 
-Bibi Narisa Alleyne – Frontend UI + Component Logic
+---
 
-Dawattie Kissoon – Styling + Setup
+👥 Team Members & Contributions
 
-Great – Documentation + Support
+Bibi Narisa Alleyne – Frontend UI, component logic, state management, performance optimization
 
-How to Run Locally
+Dawattie Kissoon – Styling, layout, project setup
 
-Clone the repository:
+Great Opiti – Documentation and support
+
+
+
+---
+
+🛠 How to Run Locally
+
+1️⃣ Clone the repository
 
 git clone https://github.com/narisaalleyne/weatherwise.git
 
-
-Install dependencies:
+2️⃣ Install dependencies
 
 npm install
 
-
-Start the development server:
+3️⃣ Start the development server
 
 npm run dev
 
-Next Steps
+Open your browser at:
+👉 http://localhost:3000
 
-Further enhance error handling (e.g., network errors).
 
-Add weather forecasts for multiple days.
+---
 
-Include additional visualizations (e.g., graphs for temperature trends).
+📊 Project Status
 
-Deploy project for public access.
+✅ Phase 1 completed
+✅ Phase 2 completed
+✅ Phase 3 completed
 
-Replace API PlaceHolder
-
-Project Status
-
-Phase 2 completed
-
-WeatherWise now supports live weather data, favourites management, and improved UI/UX.
+WeatherWise now includes performance optimizations, persistent favourites, live API integration, and is fully prepared for presentation and evaluation

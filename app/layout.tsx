@@ -14,16 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col bg-gray-100">
-        {/* Navigation Bar */}
+      <body className="min-h-screen flex flex-col bg-slate-50 text-gray-800 transition-colors duration-300">
         <NavBar />
-
-        {/* Main Page Content */}
         <main className="flex-1 w-full max-w-4xl mx-auto px-4 py-6">
           {children}
         </main>
-
-        {/* Footer */}
         <Footer />
       </body>
     </html>

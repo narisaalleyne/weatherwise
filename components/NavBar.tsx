@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export default function NavBar() {
-  const pathname = usePathname(); // Highlight active page
+  const pathname = usePathname();
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -13,13 +13,11 @@ export default function NavBar() {
   ];
 
   return (
-    <nav className="w-full bg-blue-600 text-white py-4 shadow-lg">
+    <nav className="w-full bg-blue-600 text-white py-4 shadow-lg transition-colors duration-300">
       <div className="max-w-5xl mx-auto flex justify-between items-center px-4">
-        {/* Logo / Brand Name */}
         <h1 className="text-2xl font-semibold">WeatherWise</h1>
 
-        {/* Navigation Links */}
-        <div className="flex gap-6 text-lg">
+        <div className="flex gap-6 items-center text-lg">
           {navItems.map((item) => (
             <Link
               key={item.path}

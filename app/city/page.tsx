@@ -1,7 +1,11 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useState } from "react";
-import WeatherCard from "../../components/WeatherCard";
+
+const WeatherCard = dynamic(() => import("../../components/WeatherCard"), {
+  loading: () => <p className="text-center">Loading weather...</p>,
+});
 
 export default function CityPage() {
   const [city, setCity] = useState("");
@@ -14,12 +18,8 @@ export default function CityPage() {
 
   return (
     <main className="max-w-4xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-4">City Weather Information 🌍</h1>
-      <p className="mb-6 text-lg text-gray-700">
-        Use this page to check weather info for any city. (More features will be added in Phase 3!)
-      </p>
+      <h1 className="text-3xl font-bold mb-4 text-emerald-700">City Weather Information 🌍</h1>
 
-      {/* City Input Form */}
       <form onSubmit={handleSubmit} className="flex gap-4 mb-6">
         <input
           type="text"
@@ -28,7 +28,6 @@ export default function CityPage() {
           onChange={(e) => setCity(e.target.value)}
           className="border p-2 rounded-md flex-1"
         />
-
         <button
           type="submit"
           className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
@@ -37,7 +36,6 @@ export default function CityPage() {
         </button>
       </form>
 
-      {/* Render WeatherCard AFTER submitting */}
       {submittedCity && (
         <div className="mt-4">
           <WeatherCard city={submittedCity} />

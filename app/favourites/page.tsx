@@ -1,18 +1,27 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Favourites() {
   const [favourites, setFavourites] = useState<string[]>([]);
   const [city, setCity] = useState("");
+  const [hasLoaded, setHasLoaded] = useState(false);
+
+  useEffect(() => {
+    const stored = localStorage.getItem("favourites");
+    if (stored) setFavourites(JSON.parse(stored));
+    setHasLoaded(true);
+  }, []);
+
+  useEffect(() => {
+    if (hasLoaded) {
+      localStorage.setItem("favourites", JSON.stringify(favourites));
+    }
+  }, [favourites, hasLoaded]);
 
   function addCity() {
-    if (city.trim() === "") return;
-
-    if (!favourites.includes(city)) {
-      setFavourites([...favourites, city]);
-    }
-
+    if (!city.trim()) return;
+    if (!favourites.includes(city)) setFavourites([...favourites, city]);
     setCity("");
   }
 
@@ -22,9 +31,8 @@ export default function Favourites() {
 
   return (
     <main className="max-w-3xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-4">Your Favourite Cities ⭐</h1>
+      <h1 className="text-3xl font-bold mb-4 text-emerald-700">Your Favourite Cities ⭐</h1>
 
-      {/* City Input */}
       <div className="flex gap-3 mb-6">
         <input
           value={city}
@@ -40,18 +48,16 @@ export default function Favourites() {
         </button>
       </div>
 
-      {/* Favourites List */}
       {favourites.length === 0 ? (
         <p className="text-gray-600 text-lg">No favourite cities yet...</p>
       ) : (
         <ul className="space-y-3">
-          {favourites.map((c, index) => (
+          {favourites.map((c) => (
             <li
-              key={index}
+              key={c}
               className="flex justify-between items-center p-3 border rounded-md"
             >
               <span className="font-medium">{c}</span>
-
               <button
                 onClick={() => removeCity(c)}
                 className="text-red-600 hover:text-red-800"
